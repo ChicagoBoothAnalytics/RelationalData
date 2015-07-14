@@ -11,6 +11,6 @@ def normalize_df_sub_mu_div_sigma(data_frame, means=None, standard_deviations=No
         means = data_frame.mean()
     if standard_deviations is None:
         standard_deviations = data_frame.std()
-    normalized_data_frame = data_frame.sub(means).truediv(standard_deviations)
+    normalized_data_frame = (data_frame - means) / standard_deviations
     return OrderedDict(means=means, standard_deviations=standard_deviations,
                        normalized_data_frame=normalized_data_frame)
