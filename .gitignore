@@ -56,6 +56,9 @@ docs/_build/
 # PyBuilder
 target/
 
+# iPython Notebook files
+*ipynb_checkpoints*
+
 # JetBrains IntelliJ IDEA files
 *.iml
 .idea/
