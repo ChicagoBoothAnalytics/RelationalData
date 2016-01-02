@@ -1,12 +1,11 @@
-# HelpyFun by Chicago Booth Analytics Club
+# Tutorials on Data Frames and Relational Databases
+ 
+This repository contains tutorials on manipulating data frames and querying relational databases. Tools covered include:
 
-This repo is developed and maintained by members of the Analytics Club at the University of Chicago Booth School of Business.
+- `R` `data.frame` and `data.table`;
 
-The repo contains miscellaneous "helper" Python functions (hence the name "**HelpyFun**") and custom data structures that are useful for a wide variety of Python programming tasks.
+- `Python` `Pandas` data frames;
+ 
+- `Apache Spark`, `Spark DataFrame` and `Spark SQL`.
 
-This is also a fun medium for our Analytics Club members to learn and practice the following:
-
-* General Python programming;
-* Version control via Git and GitHub;
-* Packaging and distributing a Python package; and
-* Co-programming and co-governing a shared software development project in general.
+The tutorials are dataset-centric, with similar examples illustrated in multiple ways by different tools.
