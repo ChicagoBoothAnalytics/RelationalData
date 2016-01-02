@@ -10,4 +10,4 @@ This repository contains tutorials on manipulating data frames and querying rela
  
 - `Apache Spark`, which ships with __`Spark DataFrame`__ and __`Spark SQL`__.
 
-The tutorials are dataset-centric, with similar examples illustrated in multiple ways by different tools.
+In order to provide meaningful context and motivation, tutorials are structured as dataset-centric cases, with similar examples illustrated in multiple ways by different tools.
