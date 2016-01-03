@@ -59,6 +59,10 @@ target/
 # iPython Notebook files
 *ipynb_checkpoints*
 
+# Spark files
+*metastore_db*
+pyspark_csv.py
+
 # JetBrains IntelliJ IDEA files
 *.iml
 .idea/
