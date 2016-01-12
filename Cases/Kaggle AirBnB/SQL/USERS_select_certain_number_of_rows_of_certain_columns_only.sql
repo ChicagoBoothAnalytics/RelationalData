@@ -5,7 +5,7 @@ SELECT   -- list of specific columns
     language,
     country_destination
   FROM
-    users_train
+    users
   LIMIT
     30   -- limit result to N rows only
   ;

@@ -1,7 +1,7 @@
 SELECT
     *  -- select all columns
   FROM
-    users_train
+    users
   LIMIT
     30   -- limit the result to N rows only
   ;

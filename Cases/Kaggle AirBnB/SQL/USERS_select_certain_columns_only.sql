@@ -5,4 +5,4 @@ SELECT   -- to select specific columns below only
     language,
     country_destination
   FROM
-    users_train;
+    users;
