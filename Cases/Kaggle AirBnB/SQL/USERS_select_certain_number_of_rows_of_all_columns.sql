@@ -1,4 +1,4 @@
-SELECT
+﻿SELECT
     *  -- select all columns
   FROM
     users
