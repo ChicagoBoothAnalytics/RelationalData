@@ -25,7 +25,7 @@ SELECT
         country_destination,
         population_in_thousands
       FROM
-        age_gender_destination_stats) subq
+        age_gender_destination_stats) sub_query
   ORDER BY
     age_from,
     gender,
