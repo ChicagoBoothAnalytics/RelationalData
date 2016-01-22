@@ -2,6 +2,9 @@
 
 ## `SQL` Topics
 
+___Note__: the `SQL` dialect used to illustrate the below topics is __`PostgreSQL`___
+
+
 Basic:
 
 - `SELECT` all columns of a table
@@ -9,11 +12,14 @@ Basic:
 - `SELECT ... INTO TEMP TABLE ...` for creating intermediate tables
     - `DROP TABLE IF EXISTS ...` for deleting temp table
 - `LIMIT` number of rows returned
-- `AS` (aliasing / renaming)
+- `AS` for aliasing / renaming
 - `NULL` values for empty cells
 - `DISTINCT` values of a column, or tuples of values across columns
-- `ORDER BY` (sorting)
-- `GROUP BY` (aggregation)
+- `ORDER BY` for sorting
+- Aggregating functions:
+    - `COUNT`, `SUM` & `AVG`
+    - `MAX` & `MIN`
+- `GROUP BY` for grouped aggregation
 <br><br>
 
 
