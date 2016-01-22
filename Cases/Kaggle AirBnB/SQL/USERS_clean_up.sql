@@ -1,3 +1,7 @@
+/* NOTE: this script assumes the following scripts have been run:
+- AGDstats_generate_agefrom_and_ageto_from_agebucket.sql */
+
+
 DROP TABLE IF EXISTS users_clean_temp;
 
 SELECT
