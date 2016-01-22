@@ -2,7 +2,7 @@
 
 ## `SQL` Topics
 
-___Note__: the `SQL` dialect used to illustrate the below topics is __`PostgreSQL`___
+__Note__: the `SQL` dialect used to illustrate the below topics is __`PostgreSQL`__
 
 
 Basic:
@@ -46,5 +46,5 @@ Advanced:
     - `EXTRACT(... FROM ...)` for getting date/time component
     - `TO_CHAR` for converting date/time component to string
     
-- Sub-queries
+- Sub-queries & Common Table Expressions (CTEs)
 - Window functions
