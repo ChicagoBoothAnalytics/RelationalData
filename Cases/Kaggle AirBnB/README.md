@@ -15,6 +15,11 @@ Basic:
 - `AS` for aliasing / renaming
 - `NULL` values for empty cells
 - `DISTINCT` values of a column, or tuples of values across columns
+- `WHERE` & logical comparisons:
+    - `=` for equality
+    - `!=`, `>`, `>=`, `<`, `<=` for inequalities
+    - `IN` for checking membership in values list
+    - `LIKE` & `ILIKE` for string matching
 - `ORDER BY` for sorting
 - Aggregating functions:
     - `COUNT`, `SUM` & `AVG`
