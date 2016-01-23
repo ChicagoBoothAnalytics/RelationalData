@@ -13,7 +13,8 @@ SELECT
         age_bucket,
         RANK() OVER desc_nb_1st_bkgs_by_age_bucket AS dest_rank,
         dest,
-        nb_1st_bkgs_2014
+        nb_1st_bkgs_2014,
+        nb_1st_bkgs_2014 / SUM(nb_1st_bkgs_2014) OVER by_age_bucket AS prop_in_bucket_nb_bkgs
       FROM
 
         (SELECT
@@ -32,6 +33,8 @@ SELECT
             users_clean.country_destination) sub_query_1
 
       WINDOW
+        by_age_bucket AS
+          (PARTITION BY age_bucket),
         desc_nb_1st_bkgs_by_age_bucket AS
           (PARTITION BY age_bucket
            ORDER BY nb_1st_bkgs_2014 DESC)) sub_query_2
