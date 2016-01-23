@@ -15,28 +15,29 @@ SELECT
       FROM
 
         (SELECT
-            users_clean_with_age_buckets.age_bucket AS age_bucket,
+            age_buckets.age_bucket AS age_bucket,
             age_buckets.age_from AS age_from,
-            users_clean_with_age_buckets.country_destination AS country_destination,
+            users_clean.country_destination AS country_destination,
             COUNT(*) AS nb_first_bookings_2014
           FROM
-            users_clean_with_age_buckets
+            users_clean
               LEFT JOIN age_buckets
-                ON users_clean_with_age_buckets.age_bucket = age_buckets.age_bucket
+                ON users_clean.age BETWEEN age_buckets.age_from AND age_buckets.age_to
           WHERE
-            users_clean_with_age_buckets.country_destination NOT IN ('US', 'other', 'NDF') AND
-            users_clean_with_age_buckets.fst_bkg_yr = 2014
+            users_clean.country_destination NOT IN ('US', 'other', 'NDF') AND
+            users_clean.fst_bkg_yr = 2014
           GROUP BY
-            users_clean_with_age_buckets.age_bucket,
+            age_buckets.age_bucket,
             age_buckets.age_from,
-            users_clean_with_age_buckets.country_destination) sub_query_1
+            users_clean.country_destination) sub_query_1
 
       WINDOW
         descending_nb_first_bookings_by_age_bucket AS
           (PARTITION BY age_bucket
-           ORDER BY nb_first_bookings_2014 DESC)
-      ORDER BY
-        age_from) sub_query_2
+           ORDER BY nb_first_bookings_2014 DESC)) sub_query_2
 
   WHERE
-    nb_first_bookings_2014_rank <= 3;
+    nb_first_bookings_2014_rank <= 3
+  ORDER BY
+    age_from,
+    nb_first_bookings_2014_rank;
