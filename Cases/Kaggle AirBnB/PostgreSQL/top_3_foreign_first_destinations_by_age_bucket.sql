@@ -11,7 +11,7 @@ SELECT
         age_from,
         country_destination,
         nb_first_bookings_2014,
-        RANK() OVER by_age_bucket AS nb_first_bookings_2014_rank
+        RANK() OVER descending_nb_first_bookings_by_age_bucket AS nb_first_bookings_2014_rank
       FROM
 
         (SELECT
@@ -24,7 +24,6 @@ SELECT
               LEFT JOIN age_buckets
                 ON users_clean_with_age_buckets.age_bucket = age_buckets.age_bucket
           WHERE
-            users_clean_with_age_buckets.age_bucket IS NOT NULL AND
             users_clean_with_age_buckets.country_destination NOT IN ('US', 'other', 'NDF') AND
             users_clean_with_age_buckets.fst_bkg_yr = 2014
           GROUP BY
@@ -33,7 +32,7 @@ SELECT
             users_clean_with_age_buckets.country_destination) sub_query_1
 
       WINDOW
-        by_age_bucket AS
+        descending_nb_first_bookings_by_age_bucket AS
           (PARTITION BY age_bucket
            ORDER BY nb_first_bookings_2014 DESC)
       ORDER BY

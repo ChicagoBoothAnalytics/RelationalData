@@ -1,7 +1,3 @@
-/* NOTE: this script assumes the following scripts have been run:
-- AGDstats_generate_agefrom_and_ageto_from_agebucket.sql */
-
-
 DROP TABLE IF EXISTS users_clean_temp;
 
 SELECT
@@ -125,25 +121,3 @@ SELECT
     *
   FROM
     users_clean;
-
-
-/* augment "users_clean" table with age buckets;
-this assumes the script "AGDstats_generate_agefrom_and_ageto_from_agebucket.sql" script
-has been run */
-
-DROP TABLE IF EXISTS users_clean_with_age_buckets;
-
-SELECT
-    users_clean.*,
-    age_buckets.age_bucket
-  INTO
-    TEMP TABLE users_clean_with_age_buckets
-  FROM
-    users_clean
-      LEFT JOIN age_buckets
-        ON users_clean.age BETWEEN age_buckets.age_from AND age_buckets.age_to;
-
-SELECT
-    *
-  FROM
-    users_clean_with_age_buckets;
