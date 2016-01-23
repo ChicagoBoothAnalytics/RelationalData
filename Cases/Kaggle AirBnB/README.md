@@ -6,10 +6,9 @@ __Note__: the `SQL` dialect used to illustrate the below topics is __`PostgreSQL
 
 
 Basic:
-
 - `SELECT` all columns of a table
 - `SELECT` certain columns of a table
-- `SELECT ... INTO TEMP TABLE ...` for creating intermediate tables
+- `SELECT ... INTO TEMP TABLE ...` for creating temporary / intermediate table from query results
     - `DROP TABLE IF EXISTS ...` for deleting temp table
 - `LIMIT` number of rows returned
 - `AS` for aliasing / renaming
@@ -42,14 +41,11 @@ Intermediate:
 
 
 Advanced:
-
 - String-manipulating functions
     - `CONCAT` for concatenating strings
     - `SUBSTR` for getting part of string
-    
 - Date/Time-manipulating functions
     - `EXTRACT(... FROM ...)` for getting date/time component
     - `TO_CHAR` for converting date/time component to string
-    
 - Sub-queries & Common Table Expressions (CTEs)
 - Window functions
