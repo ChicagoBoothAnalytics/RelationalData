@@ -3,22 +3,23 @@
 - USERS_clean_up.sql */
 
 SELECT
-    *
+    sub_query_2.*,
+    countries.destination_language AS dest_lang,
+    countries.distance_km AS dist_km,
+    countries.destination_km2 AS dest_area_km2
   FROM
 
     (SELECT
         age_bucket,
-        age_from,
-        country_destination,
-        nb_first_bookings_2014,
-        RANK() OVER descending_nb_first_bookings_by_age_bucket AS nb_first_bookings_2014_rank
+        RANK() OVER desc_nb_1st_bkgs_by_age_bucket AS dest_rank,
+        dest,
+        nb_1st_bkgs_2014
       FROM
 
         (SELECT
             age_buckets.age_bucket AS age_bucket,
-            age_buckets.age_from AS age_from,
-            users_clean.country_destination AS country_destination,
-            COUNT(*) AS nb_first_bookings_2014
+            users_clean.country_destination AS dest,
+            COUNT(*) AS nb_1st_bkgs_2014
           FROM
             users_clean
               LEFT JOIN age_buckets
@@ -28,16 +29,18 @@ SELECT
             users_clean.fst_bkg_yr = 2014
           GROUP BY
             age_buckets.age_bucket,
-            age_buckets.age_from,
             users_clean.country_destination) sub_query_1
 
       WINDOW
-        descending_nb_first_bookings_by_age_bucket AS
+        desc_nb_1st_bkgs_by_age_bucket AS
           (PARTITION BY age_bucket
-           ORDER BY nb_first_bookings_2014 DESC)) sub_query_2
+           ORDER BY nb_1st_bkgs_2014 DESC)) sub_query_2
+
+    LEFT JOIN countries
+      ON sub_query_2.dest = countries.country_destination
 
   WHERE
-    nb_first_bookings_2014_rank <= 3
+    sub_query_2.dest_rank <= 3
   ORDER BY
-    age_from,
-    nb_first_bookings_2014_rank;
+    age_bucket,
+    dest_rank;
