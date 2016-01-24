@@ -22,7 +22,7 @@ SELECT
             age_buckets.age_bucket AS age_bucket,
             users_clean.country_destination AS dest,
             COUNT(DISTINCT users_clean.id) AS nb_1st_bkgs_2014,
-            nb_all_bkgs_2015
+            age_dest_stats.nb_all_bkgs_2015 AS nb_all_bkgs_2015
           FROM
             users_clean
               LEFT JOIN age_buckets
