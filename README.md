@@ -147,6 +147,7 @@ Basic:
 - __`.printSchema()`__: summarize column data types
 - __`.show(...)`__: show certain number of first rows
 - __`.select(...)`__: select certain columns
+- __`.toPandas`__: convert to `Pandas DataFrame`
 
 Intermediate:
 - __`.distinct()`__: select distinct rows
