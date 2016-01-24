@@ -47,7 +47,6 @@ For `Python`, we highly recommend [Continuum Analytics](https://www.continuum.io
 Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Anaconda-Python-Installation) to download and install __`Anaconda Python` v2.7__. 
 
 Then, enter a __shell command-line terminal__ &ndash; the default terminal on Mac / `Git Bash` terminal on Windows (see the [`Git` installation instructions](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-&-Git-related-version-control-software)) &ndash; and:
-
 - navigate to folder __`<your local Chicago Booth Analytics Software repo folder>/Python`__ and run the following commands:
     - __`sh Install-SQL-Related-Packages.sh`__;
         - note that for __Windows__, in order to get the __`pycopg2`__ package (essential for interacting with `PostgreSQL` databases_:
@@ -72,7 +71,6 @@ Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com
 
 __Note__: the main `SQL` dialect we use here is __`PostgreSQL`__, which usually provides a very good starting point for learning `SQL`. Other `SQL` dialects such as `MySQL`, `HiveQL`, _etc._ have some syntactic differences compared with `PostgreSQL`, especially regarding advanced functionalities.
 
-
 Basic:
 - __`SELECT`__ all columns / certain columns of table
 - __`SELECT ... INTO TEMP TABLE ...`__ for creating temporary / intermediate table from query results
@@ -93,7 +91,6 @@ Basic:
 - __`GROUP BY`__ for grouped aggregation
 <br><br>
 
-
 Intermediate:
 - __`COALESCE(...)`__ for replacing `NULL` values
 - __`CAST(... AS ...)`__ for conversion among common data types:
@@ -106,7 +103,6 @@ Intermediate:
 - __`JOIN`__ & __`LEFT JOIN`__ among 2 or more tables
     - __Equality__ Join & __Non-Equality__ Join
 <br><br>
-
 
 Advanced:
 - __String__-manipulating functions
@@ -121,25 +117,37 @@ Advanced:
     - __`LAG`__ & __`LEAD`__
 
 
-
-### `Python Pandas`
-
+### `Python Pandas DataFrame`
 
 Basic:
 - __`len(<Pandas DataFrame>)`__: count number of rows
 - __`.columns`__: list of columns
-
+- __`.info(...)`__: summary, including column data types
+- __`.loc[..., ...]`__: slicing of by string-label indices and column names, plus boolean logical conditions
+- __`.iloc[..., ...]`__: slicing by integer indices and integer column numbers
+- __`.ix[..., ...]`__: versatile slicing by a mixture of integer and string indices and column names, plus boolean logical conditions
+<br><br>
 
 Intermediate:
--
+- __`.unique()`__: list unique / distinct values from a `Pandas` __series__ / `DataFrame` column
+- __`.isnull()`__: detect `None` & `numpy.nan` values
+- __`.rename(...)`__: rename columns
+<br><br>
 
 Advanced:
--
+- __`.groupby(...)`__: similar to `GROUP BY` in `SQL`
+<br><br>
 
 
 ### `PySpark DataFrame`
 
 Basic:
-
 - __`.count()`__: count number of rows 
 - __`.columns`__: list of columns
+- __`.printSchema()`__: summarize column data types
+- __`.show(...)`__: show certain number of first rows
+- __`.select(...)`__: select certain columns
+
+Intermediate:
+- __`.distinct()`__: select distinct rows
+<br><br>
