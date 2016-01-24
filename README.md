@@ -25,19 +25,27 @@ Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com
 - __`Git`__; and
 - __`SourceTree`__.
 
-Then, use `SourceTree` to __clone [our GitHub repository](https://github.com/ChicagoBoothAnalytics/RelationalData)__ into a folder on your personal computer.
+
+### Clone Chicago Booth Analytics's `Software` and `RelationalData` Repos onto Your Computer
+
+One you have installed `Git` and `SourceTree`, use `SourceTree` to __clone__ the following GitHub repos onto folders on your computer: 
+
+- [__`Software`__](https://github.com/ChicagoBoothAnalytics/Software), which contains scripts for install some difficult software; and
+- [__`RelationalData`__](https://github.com/ChicagoBoothAnalytics/RelationalData), _i.e._ this tutorial repo.
 
 
-### JetBrains DataGrip `SQL` IDE
+### JetBrains `DataGrip` `SQL` IDE
 
-[JetBrains](https://www.jetbrains.com), a developer of some of the best integrated development environments (IDEs), has a nice IDE named [__DataGrip__](https://www.jetbrains.com/datagrip) for working with relational databases.
+[JetBrains](https://www.jetbrains.com), a developer of some of the best integrated development environments (IDEs), has a nice IDE named [__`DataGrip`__](https://www.jetbrains.com/datagrip) for working with relational databases.
 
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install DataGrip.
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install `DataGrip`.
 
 
 ### Anaconda `Python` v2.7 & `Python` Packages
  
-For `Python`, we highly recommend the 
+For `Python`, we highly recommend [Continuum Analytics](https://www.continuum.io)'s [__`Anaconda`__ distribution](http://docs.continuum.io/anaconda/index), which helpfully pre-packages hundreds of useful packages for scientific computing and saves you the frustration of installing those on your own.
+ 
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install `DataGrip`. 
 
 ### `R` & `R` packages
 
