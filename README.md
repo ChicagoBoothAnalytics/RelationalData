@@ -50,7 +50,7 @@ Then, enter a __shell command-line terminal__ &ndash; the default terminal on Ma
 
 - navigate to folder __`<your local Chicago Booth Analytics Software repo folder>/Python`__ and run the following commands:
     - __`sh Install-SQL-Related-Packages.sh`__;
-        - note that for __Windows__, in order to get the `pycopg2` package:
+        - note that for __Windows__, in order to get the __`pycopg2`__ package (essential for interacting with `PostgreSQL` databases_:
             - go [__here__](http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg);
             - download a `.whl` file appropriate for your Windows machine's processor (32-bit / 64-bit);
             - enter a command-line terminal, navigate to the download folder; and
@@ -59,6 +59,9 @@ Then, enter a __shell command-line terminal__ &ndash; the default terminal on Ma
 
 
 ### `R` & `R` packages
+
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__. 
+
 
 ## Outline of Topics
 
