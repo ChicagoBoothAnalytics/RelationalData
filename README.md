@@ -64,12 +64,13 @@ Then, enter a __shell command-line terminal__ &ndash; the default terminal on Ma
 Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__. 
 
 
+
 ## Outline of Topics
 
 
 ### __`SQL`__
 
-__Note__: the main `SQL` dialect we use here is __`PostgreSQL`__.
+__Note__: the main `SQL` dialect we use here is __`PostgreSQL`__, which usually provides a very good starting point for learning `SQL`. Other `SQL` dialects such as `MySQL`, `HiveQL`, _etc._ have some syntactic differences compared with `PostgreSQL`, especially regarding advanced functionalities.
 
 
 Basic:
@@ -120,8 +121,25 @@ Advanced:
     - __`LAG`__ & __`LEAD`__
 
 
+
 ### `Python Pandas`
 
 
-### `PySpark SQL`
+Basic:
+- __`len(<Pandas DataFrame>)`__: count number of rows
+- __`.columns`__: list of columns
 
+
+Intermediate:
+-
+
+Advanced:
+-
+
+
+### `PySpark DataFrame`
+
+Basic:
+
+- __`.count()`__: count number of rows 
+- __`.columns`__: list of columns
