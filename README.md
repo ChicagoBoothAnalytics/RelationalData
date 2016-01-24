@@ -154,3 +154,17 @@ Basic:
 Intermediate:
 - __`.distinct()`__: select distinct rows
 <br><br>
+
+
+## Tips for Exploratory Analyses of Relational Data
+
+Below is a simple checklist of things you may want to examine to effectively explore a set of relational data:
+
+- For each table, examine which columns are __numeric__ and which are __categorical__ in nature, and which represent a body of __text__ or an __array__ of values;
+
+- For each categorical column, list out the __distinct categories__, count their frequencies, and, if there are too many, consider how you may group them into __fewer super-categories__;
+
+- Define a number of __metrics__ you believe are relevant; for each metric, examine its:
+    - __Growth trends__ over time;
+    - __Cyclical changes__ across ___hours of a day___, ___days of a week___, ___months of a year___, _etc._;
+    - __Cross-sectional variations__ & __rankings__ across categories / segments / tiers of data.
