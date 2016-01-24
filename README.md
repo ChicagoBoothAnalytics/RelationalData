@@ -24,7 +24,7 @@ __Note__: the `SQL` dialect used to illustrate the below topics is __`PostgreSQL
 
 
 Basic:
-- __`SELECT`__ all columns / certain columns of a table
+- __`SELECT`__ all columns / certain columns of table
 - __`SELECT ... INTO TEMP TABLE ...`__ for creating temporary / intermediate table from query results
     - __`DROP TABLE IF EXISTS ...`__ for deleting temp table
 - __`LIMIT`__ number of rows returned
@@ -67,5 +67,5 @@ Advanced:
     - __`TO_CHAR`__ for converting date/time component to string
 - __Sub-queries__ & Common Table Expressions (CTEs)
 - __Windowing__ (__`PARTITION BY`__ & __`ORDER BY`__) & __Windowed Analytics Functions__:  
-    - `ROW_NUMBER()`, `RANK()` & `DENSE_RANK()`
-    - `LAG` & `LEAD`
+    - __`ROW_NUMBER()`__, __`RANK()`__ & `DENSE_RANK()`
+    - __`LAG`__ & __`LEAD`__
