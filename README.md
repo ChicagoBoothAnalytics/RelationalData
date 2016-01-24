@@ -55,8 +55,9 @@ Then, enter a __shell command-line terminal__ &ndash; the default terminal on Ma
             - download a `.whl` file appropriate for your Windows machine's processor (32-bit / 64-bit);
             - enter a command-line terminal, navigate to the download folder; and
             - run command: __`pip install <the-downloaded-file-name.whl>`__;
+    - __`sh Install-ApacheSpark-Related-Packages.sh`__; and
     - __`sh Install-Visualization-Packages.sh`__.
-
+    
 
 ### `R` & `R` packages
 
@@ -119,4 +120,8 @@ Advanced:
     - __`LAG`__ & __`LEAD`__
 
 
-### Python Pandas
+### `Python Pandas`
+
+
+### `PySpark SQL`
+
