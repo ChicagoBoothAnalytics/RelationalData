@@ -102,6 +102,7 @@ Intermediate:
 - __`CASE WHEN ... THEN ... WHEN ... THEN ... ELSE ... END`__ conditional logics
 - __`JOIN`__ & __`LEFT JOIN`__ among 2 or more tables
     - __Equality__ Join & __Non-Equality__ Join
+- __`CROSS JOIN`__ to create Cartesian product
 - __`VALUES`__ clause to create table on the fly
 <br><br>
 
