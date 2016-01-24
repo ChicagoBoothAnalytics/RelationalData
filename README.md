@@ -4,23 +4,49 @@ This repository contains tutorials on manipulating data frames and querying rela
 
 - Traditional `SQL` tools such as __`PostgreSQL`__ and __`MySQL`__;
 
-- `R` __`data.frame`__ and __`data.table`__;
+- `Python` __`Pandas`__ data frames;
 
-- `Python` __`Pandas`__ data frames; and
+- `R` __`data.frame`__ and __`data.table`__; and
  
 - `Apache Spark`, which ships with __`Spark DataFrame`__ and __`Spark SQL`__.
 
-In order to provide meaningful context and motivation, tutorials are structured as dataset-centric cases, with similar examples illustrated in multiple ways by different tools.
+In order to provide meaningful context and motivation, tutorials are structured as dataset-centric cases, with similar examples illustrated in multiple ways using different tools.
+
 
 
 ## Software Installation Requirements & Guides
 
 
+### `Git` & Related Version-Control Software
+
+[__`Git`__](https://git-scm.com) is the go-to software solution for version control / change-tracking of programming code and related materials.
+
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-%26-Git-related-version-control-software) to download and install:
+- __`Git`__; and
+- __`SourceTree`__.
+
+Then, use `SourceTree` to __clone [our GitHub repository](https://github.com/ChicagoBoothAnalytics/RelationalData)__ into a folder on your personal computer.
+
+
+### JetBrains DataGrip `SQL` IDE
+
+[JetBrains](https://www.jetbrains.com), a developer of some of the best integrated development environments (IDEs), has a nice IDE named [__DataGrip__](https://www.jetbrains.com/datagrip) for working with relational databases.
+
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install DataGrip.
+
+
+### Anaconda `Python` v2.7 & `Python` Packages
+ 
+For `Python`, we highly recommend the 
+
+### `R` & `R` packages
+
 ## Outline of Topics
+
 
 ### __`SQL`__
 
-__Note__: the `SQL` dialect used to illustrate the below topics is __`PostgreSQL`__
+__Note__: the main `SQL` dialect we use here is __`PostgreSQL`__.
 
 
 Basic:
@@ -67,5 +93,8 @@ Advanced:
     - __`TO_CHAR`__ for converting date/time component to string
 - __Sub-queries__ & Common Table Expressions (CTEs)
 - __Windowing__ (__`PARTITION BY`__ & __`ORDER BY`__) & __Windowed Analytics Functions__:  
-    - __`ROW_NUMBER()`__, __`RANK()`__ & `DENSE_RANK()`
+    - __`ROW_NUMBER()`__, __`RANK()`__ & __`DENSE_RANK()`__
     - __`LAG`__ & __`LEAD`__
+
+
+### Python Pandas
