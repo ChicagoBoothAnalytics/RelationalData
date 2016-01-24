@@ -1,4 +1,4 @@
-/* this assumes the following scripts have been run:
+/* this requires the following scripts to have been run:
 - USERS_clean_up.sql */
 
 
@@ -8,8 +8,8 @@ DROP TABLE IF EXISTS nb_1st_bkgs_by_date;
 SELECT
     fst_bkg_date AS date,
     COUNT(*) AS nb_1st_bkgs
-  INTO TEMP TABLE
-    nb_1st_bkgs_by_date
+  INTO
+    TEMP TABLE nb_1st_bkgs_by_date
   FROM
     users_clean
   WHERE
@@ -31,8 +31,8 @@ DROP TABLE IF EXISTS nb_1st_bkgs_by_wk;
 SELECT
     sunday_end_of_wk,
     SUM(nb_1st_bkgs) AS nb_1st_bkgs_in_wk
-  INTO TEMP TABLE
-    nb_1st_bkgs_by_wk
+  INTO
+    TEMP TABLE nb_1st_bkgs_by_wk
   FROM
     (SELECT
         CASE WHEN CAST(EXTRACT(DoW FROM date) AS INT) % 7 > 0
@@ -60,8 +60,8 @@ DROP TABLE IF EXISTS nb_1st_bkgs_by_mth;
 SELECT
     start_of_month,
     SUM(nb_1st_bkgs) AS nb_1st_bkgs_in_mth
-  INTO TEMP TABLE
-    nb_1st_bkgs_by_mth
+  INTO
+    TEMP TABLE nb_1st_bkgs_by_mth
   FROM
     (SELECT
         CAST(DATE_TRUNC('month', date) AS DATE) AS start_of_month,

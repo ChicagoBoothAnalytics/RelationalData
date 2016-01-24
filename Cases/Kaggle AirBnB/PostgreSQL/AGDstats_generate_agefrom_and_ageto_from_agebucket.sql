@@ -14,13 +14,14 @@ SELECT
   FROM
     (SELECT
         age_bucket,
-        CASE WHEN age_bucket = '100+' THEN ARRAY['100', '100']
-             ELSE REGEXP_MATCHES(age_bucket, '([0-9]*)-([0-9]*)')
-                  -- alternatives in this case:
-                  -- REGEXP_SPLIT(age_bucket, '-') or
-                  -- STRING_TO_ARRAY(age_bucket, '-')
-             END
-             AS age_from_to,
+        CASE
+          WHEN age_bucket = '100+' THEN ARRAY['100', '100']
+          ELSE REGEXP_MATCHES(age_bucket, '([0-9]*)-([0-9]*)')
+               -- alternatives in this case:
+               -- REGEXP_SPLIT(age_bucket, '-') or
+               -- STRING_TO_ARRAY(age_bucket, '-')
+          END
+          AS age_from_to,   -- note that this is an ARRAY
         gender,
         country_destination,
         population_in_thousands
