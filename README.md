@@ -29,7 +29,6 @@ Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com
 ### Clone Chicago Booth Analytics's `Software` and `RelationalData` Repos onto Your Computer
 
 One you have installed `Git` and `SourceTree`, use `SourceTree` to __clone__ the following GitHub repos onto folders on your computer: 
-
 - [__`Software`__](https://github.com/ChicagoBoothAnalytics/Software), which contains scripts for install some difficult software; and
 - [__`RelationalData`__](https://github.com/ChicagoBoothAnalytics/RelationalData), _i.e._ this tutorial repo.
 
@@ -45,7 +44,19 @@ Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com
  
 For `Python`, we highly recommend [Continuum Analytics](https://www.continuum.io)'s [__`Anaconda`__ distribution](http://docs.continuum.io/anaconda/index), which helpfully pre-packages hundreds of useful packages for scientific computing and saves you the frustration of installing those on your own.
  
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install `DataGrip`. 
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Anaconda-Python-Installation) to download and install __`Anaconda Python` v2.7__. 
+
+Then, enter a __shell command-line terminal__ &ndash; the default terminal on Mac / `Git Bash` terminal on Windows (see the [`Git` installation instructions](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-&-Git-related-version-control-software)) &ndash; and:
+
+- navigate to folder __`<your local Chicago Booth Analytics Software repo folder>/Python`__ and run the following commands:
+    - __`sh Install-SQL-Related-Packages.sh`__;
+        - note that for __Windows__, in order to get the `pycopg2` package:
+            - go [__here__](http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg);
+            - download a `.whl` file appropriate for your Windows machine's processor (32-bit / 64-bit);
+            - enter a command-line terminal, navigate to the download folder; and
+            - run command: __`pip install <the-downloaded-file-name.whl>`__;
+    - __`sh Install-Visualization-Packages.sh`__.
+
 
 ### `R` & `R` packages
 
