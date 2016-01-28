@@ -31,7 +31,6 @@ SELECT
 
             ON users_clean.country_destination = age_dest_stats.dest AND
                age_buckets.age_bucket = age_dest_stats.age_bucket
-
   WHERE
     users_clean.country_destination NOT IN ('US', 'other', 'NDF') AND
     users_clean.fst_bkg_yr = 2014
