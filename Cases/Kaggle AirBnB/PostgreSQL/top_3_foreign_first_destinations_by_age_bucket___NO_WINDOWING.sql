@@ -117,9 +117,8 @@ SELECT
   FROM
 
     query_2
-
-    LEFT JOIN countries
-      ON query_2.dest = countries.country_destination
+      LEFT JOIN countries
+        ON query_2.dest = countries.country_destination
 
   ORDER BY
     age_bucket,
