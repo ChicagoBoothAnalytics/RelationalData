@@ -36,7 +36,7 @@ SELECT
     CASE
       WHEN date_first_booking IS NULL THEN NULL
       ELSE CONCAT(EXTRACT(DoW FROM date_first_booking), ': ',
-                     TO_CHAR(date_first_booking, 'Dy'))
+                  TO_CHAR(date_first_booking, 'Dy'))
       END
       AS fst_bkg_day_of_wk,
     CASE
