@@ -49,18 +49,27 @@ SELECT
     query_1;
 
 
--- query_1a
-DROP TABLE IF EXISTS query_1a;
+-- query_2
+DROP TABLE IF EXISTS query_2;
 
 SELECT
     query_1.age_bucket AS age_bucket,
+
+    (SELECT
+        COUNT(*) + 1
+      FROM
+        query_1 query_1a_clone
+      WHERE
+        query_1a_clone.age_bucket = query_1.age_bucket AND
+        query_1a_clone.nb_1st_bkgs_2014 > query_1.nb_1st_bkgs_2014) AS dest_rank,
+
     query_1.dest AS dest,
     query_1.nb_1st_bkgs_2014 AS nb_1st_bkgs_2014,
     query_1.nb_1st_bkgs_2014 / query_1_sum_groupby_age_bucket.total_nb_1st_bkgs_2014
       AS prop_in_bucket_nb_bkgs,
     query_1.nb_1st_bkgs_2014 / query_1.nb_all_bkgs_2015 AS prop_in_all_bkgs
   INTO
-    TEMP TABLE query_1a
+    TEMP TABLE query_2
   FROM
 
     query_1
@@ -80,30 +89,6 @@ SELECT
 SELECT
     *
   FROM
-    query_1a;
-
-
--- query_2
-DROP TABLE IF EXISTS query_2;
-
-SELECT
-    *
-  INTO
-    TEMP TABLE query_2
-  FROM
-    query_1a
-  WHERE
-    (SELECT
-        COUNT(*)
-      FROM
-        query_1a query_1a_clone
-      WHERE
-        query_1a_clone.age_bucket = query_1a.age_bucket AND
-        query_1a_clone.nb_1st_bkgs_2014 > query_1a.nb_1st_bkgs_2014) < 3;
-
-SELECT
-    *
-  FROM
     query_2;
 
 
@@ -114,11 +99,11 @@ SELECT
     countries.distance_km AS dist_km,
     countries.destination_km2 AS dest_area_km2
   FROM
-
     query_2
       LEFT JOIN countries
         ON query_2.dest = countries.country_destination
-
+  WHERE
+    query_2.dest_rank <= 3
   ORDER BY
     age_bucket,
     nb_1st_bkgs_2014 DESC;
