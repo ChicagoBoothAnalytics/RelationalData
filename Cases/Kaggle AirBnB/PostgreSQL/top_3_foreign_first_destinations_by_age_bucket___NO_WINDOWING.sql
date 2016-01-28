@@ -100,7 +100,7 @@ SELECT
         query_1a query_1a_clone
       WHERE
         query_1a_clone.age_bucket = query_1a.age_bucket AND
-        query_1a_clone.nb_1st_bkgs_2014 >= query_1a.nb_1st_bkgs_2014) <= 3;
+        query_1a_clone.nb_1st_bkgs_2014 > query_1a.nb_1st_bkgs_2014) < 3;
 
 SELECT
     *
