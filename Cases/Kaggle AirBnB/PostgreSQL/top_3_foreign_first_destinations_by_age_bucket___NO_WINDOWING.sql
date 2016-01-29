@@ -17,20 +17,20 @@ SELECT
     users_clean
       LEFT JOIN age_buckets
         ON users_clean.age BETWEEN age_buckets.age_from AND age_buckets.age_to
-          LEFT JOIN
+      LEFT JOIN
 
-            (SELECT
-              age_bucket,
-              country_destination AS dest,
-              1000 * SUM(population_in_thousands) AS nb_all_bkgs_2015
-            FROM
-              age_gender_destination_stats
-            GROUP BY
-              age_bucket,
-              country_destination) age_dest_stats
+        (SELECT
+            age_bucket,
+            country_destination AS dest,
+            1000 * SUM(population_in_thousands) AS nb_all_bkgs_2015
+          FROM
+            age_gender_destination_stats
+          GROUP BY
+            age_bucket,
+            country_destination) age_dest_stats
 
-            ON users_clean.country_destination = age_dest_stats.dest AND
-               age_buckets.age_bucket = age_dest_stats.age_bucket
+        ON users_clean.country_destination = age_dest_stats.dest AND
+           age_buckets.age_bucket = age_dest_stats.age_bucket
   WHERE
     users_clean.country_destination NOT IN ('US', 'other', 'NDF') AND
     users_clean.fst_bkg_yr = 2014

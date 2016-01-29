@@ -59,7 +59,6 @@ SELECT
 
     LEFT JOIN countries
       ON sub_query_2.dest = countries.country_destination
-
   WHERE
     sub_query_2.dest_rank <= 3
   ORDER BY
