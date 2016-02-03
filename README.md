@@ -141,7 +141,32 @@ Advanced:
 <br><br>
 
 
-### `PySpark DataFrame`
+### `R data.frame`
+
+Basic:
+- __`nrow(<data.frame>)`__: count number of rows
+- __`colnames(<data.frame>)`__ / __`names(<data.frame>)`__: vector of column names
+- __`summary(<data.frame>)`__: summarize `data.frame`
+- __`<data.frame>[..., ]`__: select rows of `data.frame` by row numbers or by logical conditions
+- __`<data.frame>[..., c(<selected column names>)]`__: select specific columns of `data.frame`, and select certain rows only by either row numbers or logical conditions
+
+
+### `R data.table`
+
+Basic:
+- __`nrow(<data.table>)`__: count number of rows
+- __`colnames(<data.table>)`__ / __`names(<data.table>)`__: vector of column names
+- __`summary(<data.table>)`__: summarize `data.table`
+- __`<data.table>[...]`__: select rows of `data.table` by row numbers or by logical conditions
+- __`<data.table>[..., .(<selected column names>)]`__: select specific columns of `data.table`, and select certain rows only by either row numbers or logical conditions
+
+Intermediate:
+- use of __`get(...)`__ to get variables by name inside the `data.table` namespace
+- use of __`:=`__ for assignment within the `data.table` namespace
+- use of __`with=FALSE`__ to force literal interpretation of inputs passed into `[..., ...]`.
+
+
+### `PySpark SQL DataFrame`
 
 Basic:
 - __`.count()`__: count number of rows 
@@ -154,6 +179,19 @@ Basic:
 Intermediate:
 - __`.distinct()`__: select distinct rows
 <br><br>
+
+
+### `SparkR SQL DataFrame`
+
+Basic:
+- __`count(<SparkR SQL DataFrame>)`__: count number of rows
+- __`columns(<SparkR SQL DataFrame>)`__: vector of column names
+- __`printSchema(<SparkR SQL DataFrame>)`__: summarize column data types
+- __`showDF(<SparkR SQL DataFrame>, <numRows>)`__: show certain number of first rows
+- __`select(...)`__: select certain columns
+
+Intermediate:
+- __`distinct(<SparkR SQL DataFrame>)`__: select distinct rows
 
 
 ## Tips for Exploratory Analyses of Relational Data
