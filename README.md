@@ -132,6 +132,7 @@ Basic:
 
 Intermediate:
 - __`.unique()`__: list unique / distinct values from a `Pandas` __series__ / `DataFrame` column
+- __`.drop_duplicates(...)`__: return unique / distinct rows of a `Pandas DataFrame`
 - __`.isnull()`__: detect `None` & `numpy.nan` values
 - __`.rename(...)`__: rename columns
 <br><br>
@@ -150,6 +151,9 @@ Basic:
 - __`<data.frame>[..., ]`__: select rows of `data.frame` by row numbers or by logical conditions
 - __`<data.frame>[..., c(<selected column names>)]`__: select specific columns of `data.frame`, and select certain rows only by either row numbers or logical conditions
 
+Intermediate:
+- __`unique(<data.frame>)`__: obtain unique / distinct rows of `data.frame`
+
 
 ### `R data.table`
 
@@ -163,7 +167,9 @@ Basic:
 Intermediate:
 - use of __`get(...)`__ to get variables by name inside the `data.table` namespace
 - use of __`:=`__ for assignment within the `data.table` namespace
-- use of __`with=FALSE`__ to force literal interpretation of inputs passed into `[..., ...]`.
+- use of __`with=FALSE`__ to force literal interpretation of inputs passed into `[..., ...]`
+- __`setnames(...)`__ for renaming `data.table` column names
+- __`unique(<data.table>)`__: obtain unique / distinct rows of `data.table`
 
 
 ### `PySpark SQL DataFrame`
@@ -189,6 +195,7 @@ Basic:
 - __`printSchema(<SparkR SQL DataFrame>)`__: summarize column data types
 - __`showDF(<SparkR SQL DataFrame>, <numRows>)`__: show certain number of first rows
 - __`select(...)`__: select certain columns
+- __`as.data.frame`__: convert to `R` `data.frame`
 
 Intermediate:
 - __`distinct(<SparkR SQL DataFrame>)`__: select distinct rows
