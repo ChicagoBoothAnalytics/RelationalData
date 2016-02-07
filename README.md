@@ -154,6 +154,10 @@ Basic:
 Intermediate:
 - __`unique(<data.frame>)`__: obtain unique / distinct rows of `data.frame`
 
+Advanced:
+- __`aggregate(...)`__: aggregrate by group, similar to `GROUP BY` in `SQL`
+<br><br>
+
 
 ### `R data.table`
 
@@ -170,6 +174,10 @@ Intermediate:
 - use of __`with=FALSE`__ to force literal interpretation of inputs passed into `[..., ...]`
 - __`setnames(...)`__ for renaming `data.table` column names
 - __`unique(<data.table>)`__: obtain unique / distinct rows of `data.table`
+
+Advanced:
+- __`<data.table>[..., ..., by=...]`__: aggregrate by group, similar to `GROUP BY` in `SQL`
+<br><br>
 
 
 ### `PySpark SQL DataFrame`
