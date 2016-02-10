@@ -176,6 +176,22 @@ Below is a simple checklist of things you may want to examine to effectively exp
 
 ## Software Installation Requirements & Guides
 
+There are 3 possible setups for running these tutorials:
+
+1. Running on an __Amazon Web Services Elastic MapReduce__ (__AWS EMR__) __server cluster__ (recommended)
+2. Running on a __Mac__ or __Windows__ machine that is __sufficiently high-spec__:
+    - RAM >= 12GB
+    - No. of Processor Cores >= 8
+
+
+### AWS EMR
+
+If you wish to use the recommended AWS EMR setup:
+
+- Follow the [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/AWS-Elastic-MapReduce-(EMR)-Cluster-Setup) to set up the necessary software for working with AWS EMR;
+- Test your set up by:
+    - Bidding for a basic EMR cluster of 1 Master + 2 Workers of M3.xLarge server type, trying a price range around $0.050/server/hour, by running a command like: `sh create.sh` `-b` __`my-s3-bucket-in-cali`__ `-m` __`m3.xlarge`__ `-p` __`0.050`__ `-n` __`2`__ `-t` __`m3.xlarge`__ `-q` __`0.050`__ `-r` __`"a normal cluster with M3.xLarge servers"`__
+
 
 ### `Git` & Related Version-Control Software
 
