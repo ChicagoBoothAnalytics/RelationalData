@@ -251,7 +251,7 @@ Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com
 Then, enter a __shell command-line terminal__ &ndash; the default terminal on Mac / `Git Bash` terminal on Windows (see the [`Git` installation instructions](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-&-Git-related-version-control-software)) &ndash; and:
 - navigate to folder __`<your local Chicago Booth Analytics Software repo folder>/Python`__ and run the following commands:
     - __`sh Install-SQL-Related-Packages.sh`__;
-        - note that for __Windows__, in order to get the __`pycopg2`__ package (essential for interacting with `PostgreSQL` databases_:
+        - note that for __Windows__, in order to get the __`PsycoPG2`__ package (essential for interacting with `PostgreSQL` databases_:
             - go [__here__](http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg);
             - download a `.whl` file appropriate for your Windows machine's processor (32-bit / 64-bit);
             - enter a command-line terminal, navigate to the download folder; and
@@ -262,4 +262,37 @@ Then, enter a __shell command-line terminal__ &ndash; the default terminal on Ma
 
 #### 3.2.5. `R` & `R` packages
 
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__. 
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__.
+
+Install certain `R`-related software:
+
+- Launch a __shell command-line terminal window__:
+    - ___Mac___: the default terminal;
+    - ___Windows___: please use the __`Git Bash`__ terminal that ships with `Git` &ndash; don't use the Windows terminal;
+
+- Navigate to __`<path to your cloned Chicago Booth Analytics Software folder>/R`__ in the command-line terminal;
+
+- Install the __`iR` kernel for `Jupyter`__, to allow us to run `R` in the `Jupyter Notebook` environment: run command __`Rscript Install-JupyterIRKernel.R`__
+
+- Install __basic `R` packages__: run command __`Rscript Install-Basic-Packages.R`__
+
+- Install __SQL and Data Frame-related packages__: run command __`Rscript Install-SQL-and-DataFrame-Packages.R`__
+
+- Install __Visualization packages__: run command __`Rscript Install-Visualization-Packages.R`__
+
+
+#### 3.2.6. Test Your Local Mac / Windows Setup
+
+- Launch a __shell command-line terminal window__:
+    - ___Mac___: the default terminal;
+    - ___Windows___: please use the __`Git Bash`__ terminal that ships with `Git` &ndash; don't use the Windows terminal;
+
+- Navigate to __`<path to your cloned Chicago Booth Analytics RelationData folder>`__ __(this repo!)_ in the command-line terminal;
+
+- Launch the `Jupyter` environment: run command __`jupyter notebook`__
+    - this would launch a browser tab with address __`localhost:8888`__
+    
+- In the `Jupyter` environment in the browswer tab:
+    - Enter the __`Test-Jupyter-Workbooks-for-Software-Setup`__ folder;
+    - __Test the setup for `Python`__: open the __`Test-Python-Software-SetUps.ipynb`__ workbook, run all cells, and verify that there are no errors;
+    - __Test the setup for `R`__: open the __`Test-R-Software-SetUps.ipynb`__ workbook, run all cells, and verify that there are no errors.
