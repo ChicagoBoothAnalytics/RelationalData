@@ -14,56 +14,6 @@ In order to provide meaningful context and motivation, tutorials are structured 
 
 
 
-## Software Installation Requirements & Guides
-
-
-### `Git` & Related Version-Control Software
-
-[__`Git`__](https://git-scm.com) is the go-to software solution for version control / change-tracking of programming code and related materials.
-
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-%26-Git-related-version-control-software) to download and install:
-- __`Git`__; and
-- __`SourceTree`__.
-
-
-### Clone Chicago Booth Analytics's `Software` and `RelationalData` Repos onto Your Computer
-
-One you have installed `Git` and `SourceTree`, use `SourceTree` to __clone__ the following GitHub repos onto folders on your computer: 
-- [__`Software`__](https://github.com/ChicagoBoothAnalytics/Software), which contains scripts for install some difficult software; and
-- [__`RelationalData`__](https://github.com/ChicagoBoothAnalytics/RelationalData), _i.e._ this tutorial repo.
-
-
-### JetBrains `DataGrip` `SQL` IDE
-
-[JetBrains](https://www.jetbrains.com), a developer of some of the best integrated development environments (IDEs), has a nice IDE named [__`DataGrip`__](https://www.jetbrains.com/datagrip) for working with relational databases.
-
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install `DataGrip`.
-
-
-### Anaconda `Python` v2.7 & `Python` Packages
- 
-For `Python`, we highly recommend [Continuum Analytics](https://www.continuum.io)'s [__`Anaconda`__ distribution](http://docs.continuum.io/anaconda/index), which helpfully pre-packages hundreds of useful packages for scientific computing and saves you the frustration of installing those on your own.
- 
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Anaconda-Python-Installation) to download and install __`Anaconda Python` v2.7__. 
-
-Then, enter a __shell command-line terminal__ &ndash; the default terminal on Mac / `Git Bash` terminal on Windows (see the [`Git` installation instructions](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-&-Git-related-version-control-software)) &ndash; and:
-- navigate to folder __`<your local Chicago Booth Analytics Software repo folder>/Python`__ and run the following commands:
-    - __`sh Install-SQL-Related-Packages.sh`__;
-        - note that for __Windows__, in order to get the __`pycopg2`__ package (essential for interacting with `PostgreSQL` databases_:
-            - go [__here__](http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg);
-            - download a `.whl` file appropriate for your Windows machine's processor (32-bit / 64-bit);
-            - enter a command-line terminal, navigate to the download folder; and
-            - run command: __`pip install <the-downloaded-file-name.whl>`__;
-    - __`sh Install-ApacheSpark-Related-Packages.sh`__; and
-    - __`sh Install-Visualization-Packages.sh`__.
-    
-
-### `R` & `R` packages
-
-Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__. 
-
-
-
 ## Outline of Topics
 
 
@@ -221,3 +171,53 @@ Below is a simple checklist of things you may want to examine to effectively exp
     - __Growth trends__ over time;
     - __Cyclical changes__ across ___hours of a day___, ___days of a week___, ___months of a year___, _etc._;
     - __Cross-sectional variations__ & __rankings__ across categories / segments / tiers of data.
+
+
+
+## Software Installation Requirements & Guides
+
+
+### `Git` & Related Version-Control Software
+
+[__`Git`__](https://git-scm.com) is the go-to software solution for version control / change-tracking of programming code and related materials.
+
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-%26-Git-related-version-control-software) to download and install:
+- __`Git`__; and
+- __`SourceTree`__.
+
+
+### Clone Chicago Booth Analytics's `Software` and `RelationalData` Repos onto Your Computer
+
+One you have installed `Git` and `SourceTree`, use `SourceTree` to __clone__ the following GitHub repos onto folders on your computer: 
+- [__`Software`__](https://github.com/ChicagoBoothAnalytics/Software), which contains scripts for install some difficult software; and
+- [__`RelationalData`__](https://github.com/ChicagoBoothAnalytics/RelationalData), _i.e._ this tutorial repo.
+
+
+### JetBrains `DataGrip` `SQL` IDE
+
+[JetBrains](https://www.jetbrains.com), a developer of some of the best integrated development environments (IDEs), has a nice IDE named [__`DataGrip`__](https://www.jetbrains.com/datagrip) for working with relational databases.
+
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install `DataGrip`.
+
+
+### Anaconda `Python` v2.7 & `Python` Packages
+ 
+For `Python`, we highly recommend [Continuum Analytics](https://www.continuum.io)'s [__`Anaconda`__ distribution](http://docs.continuum.io/anaconda/index), which helpfully pre-packages hundreds of useful packages for scientific computing and saves you the frustration of installing those on your own.
+ 
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/Anaconda-Python-Installation) to download and install __`Anaconda Python` v2.7__. 
+
+Then, enter a __shell command-line terminal__ &ndash; the default terminal on Mac / `Git Bash` terminal on Windows (see the [`Git` installation instructions](https://github.com/ChicagoBoothAnalytics/site/wiki/Git-&-Git-related-version-control-software)) &ndash; and:
+- navigate to folder __`<your local Chicago Booth Analytics Software repo folder>/Python`__ and run the following commands:
+    - __`sh Install-SQL-Related-Packages.sh`__;
+        - note that for __Windows__, in order to get the __`pycopg2`__ package (essential for interacting with `PostgreSQL` databases_:
+            - go [__here__](http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg);
+            - download a `.whl` file appropriate for your Windows machine's processor (32-bit / 64-bit);
+            - enter a command-line terminal, navigate to the download folder; and
+            - run command: __`pip install <the-downloaded-file-name.whl>`__;
+    - __`sh Install-ApacheSpark-Related-Packages.sh`__; and
+    - __`sh Install-Visualization-Packages.sh`__.
+    
+
+### `R` & `R` packages
+
+Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__. 
