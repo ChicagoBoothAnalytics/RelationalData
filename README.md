@@ -14,10 +14,10 @@ In order to provide meaningful context and motivation, tutorials are structured 
 
 
 
-## Outline of Topics
+## 1. Outline of Topics
 
 
-### __`SQL`__
+### 1.1. __`SQL`__
 
 __Note__: the main `SQL` dialect we use here is __`PostgreSQL`__, which usually provides a very good starting point for learning `SQL`. Other `SQL` dialects such as `MySQL`, `HiveQL`, _etc._ have some syntactic differences compared with `PostgreSQL`, especially regarding advanced functionalities.
 
@@ -69,7 +69,7 @@ Advanced:
     - __`LAG`__ & __`LEAD`__
 
 
-### `Python Pandas DataFrame`
+### 1.2. __`Python Pandas DataFrame`__
 
 Basic:
 - __`len(<Pandas DataFrame>)`__: count number of rows
@@ -92,7 +92,7 @@ Advanced:
 <br><br>
 
 
-### `R data.frame`
+### 1.3. __`R data.frame`__
 
 Basic:
 - __`nrow(<data.frame>)`__: count number of rows
@@ -109,7 +109,7 @@ Advanced:
 <br><br>
 
 
-### `R data.table`
+### 1.4. __`R data.table`__
 
 Basic:
 - __`nrow(<data.table>)`__: count number of rows
@@ -130,7 +130,7 @@ Advanced:
 <br><br>
 
 
-### `PySpark SQL DataFrame`
+### 1.5a. __`PySpark SQL DataFrame`__
 
 Basic:
 - __`.count()`__: count number of rows 
@@ -145,7 +145,7 @@ Intermediate:
 <br><br>
 
 
-### `SparkR SQL DataFrame`
+### 1.5b. __`SparkR SQL DataFrame`__
 
 Basic:
 - __`count(<SparkR SQL DataFrame>)`__: count number of rows
@@ -159,7 +159,7 @@ Intermediate:
 - __`distinct(<SparkR SQL DataFrame>)`__: select distinct rows
 
 
-## Tips for Exploratory Analyses of Relational Data
+## 2. Tips for Exploratory Analyses of Relational Data
 
 Below is a simple checklist of things you may want to examine to effectively explore a set of relational data:
 
@@ -174,7 +174,7 @@ Below is a simple checklist of things you may want to examine to effectively exp
 
 
 
-## Software Installation Requirements & Guides
+## 3. Software Installation Requirements & Guides
 
 There are 3 possible setups for running these tutorials:
 
@@ -184,7 +184,7 @@ There are 3 possible setups for running these tutorials:
     - No. of Processor Cores >= 8
 
 
-### AWS EMR
+### 3.1. AWS EMR
 
 If you wish to use the recommended AWS EMR setup:
 
@@ -212,14 +212,14 @@ If you wish to use the recommended AWS EMR setup:
     - Terminate your cluster through the AWS EMR management console.
     
     
-### Single Mac or Windows machine
+### 3.2. Single Mac or Windows machine
          
 If your computer is __sufficiently high-spec__ (RAM >= 12GB, No. of Processor Cores >= 8), you may try running the tutorials locally.
 
 You will need the following software setup:
 
 
-#### `Git` & Related Version-Control Software
+#### 3.2.1. `Git` & Related Version-Control Software
 
 [__`Git`__](https://git-scm.com) is the go-to software solution for version control / change-tracking of programming code and related materials.
 
@@ -228,21 +228,21 @@ Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com
 - __`SourceTree`__.
 
 
-#### Clone Chicago Booth Analytics's `Software` and `RelationalData` Repos onto Your Computer
+#### 3.2.2. Clone Chicago Booth Analytics's `Software` and `RelationalData` Repos onto Your Computer
 
 One you have installed `Git` and `SourceTree`, use `SourceTree` to __clone__ the following GitHub repos onto folders on your computer: 
 - [__`Software`__](https://github.com/ChicagoBoothAnalytics/Software), which contains scripts for install some difficult software; and
 - [__`RelationalData`__](https://github.com/ChicagoBoothAnalytics/RelationalData), _i.e._ this tutorial repo.
 
 
-#### JetBrains `DataGrip` `SQL` IDE
+#### 3.2.3. JetBrains `DataGrip` `SQL` IDE
 
 [JetBrains](https://www.jetbrains.com), a developer of some of the best integrated development environments (IDEs), has a nice IDE named [__`DataGrip`__](https://www.jetbrains.com/datagrip) for working with relational databases.
 
 Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/JetBrains-DataGrip-DBMS-IDE-Installation) to download and install `DataGrip`.
 
 
-#### Anaconda `Python` v2.7 & `Python` Packages
+#### 3.2.4. Anaconda `Python` v2.7 & `Python` Packages
  
 For `Python`, we highly recommend [Continuum Analytics](https://www.continuum.io)'s [__`Anaconda`__ distribution](http://docs.continuum.io/anaconda/index), which helpfully pre-packages hundreds of useful packages for scientific computing and saves you the frustration of installing those on your own.
  
@@ -260,6 +260,6 @@ Then, enter a __shell command-line terminal__ &ndash; the default terminal on Ma
     - __`sh Install-Visualization-Packages.sh`__.
     
 
-#### `R` & `R` packages
+#### 3.2.5. `R` & `R` packages
 
 Follow [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/R-Installation) to download and install __`R`__ of __version at least 3.2.3__. 
