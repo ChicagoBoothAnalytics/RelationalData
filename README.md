@@ -189,9 +189,28 @@ There are 3 possible setups for running these tutorials:
 If you wish to use the recommended AWS EMR setup:
 
 - Follow the [__instructions__ on the Chicago Booth Analytics wiki](https://github.com/ChicagoBoothAnalytics/site/wiki/AWS-Elastic-MapReduce-(EMR)-Cluster-Setup) to set up the necessary software for working with AWS EMR;
-- Test your set up by:
-    - Bidding for a basic EMR cluster of 1 Master + 2 Workers of M3.xLarge server type, trying a price range around $0.050/server/hour, by running a command like: `sh create.sh` `-b` __`my-s3-bucket-in-cali`__ `-m` __`m3.xlarge`__ `-p` __`0.050`__ `-n` __`2`__ `-t` __`m3.xlarge`__ `-q` __`0.050`__ `-r` __`"a normal cluster with M3.xLarge servers"`__
 
+- Test your set up:
+    
+    - Launch a __shell command-line terminal window__:
+        - ___Mac___: the default terminal;
+        - ___Windows___: please use the __`Git Bash`__ terminal that ships with `Git`, don't use the Windows terminal);
+            
+    - Navigate to _`<path to your cloned Chicago Booth Analytics Software folder>/AWS/EMR`__ in the command-line terminal;
+    
+    - Bid for a basic EMR cluster of 1 Master + 2 Workers of M3.xLarge server type, trying a price range around $0.050/server/hour, by running a command like: `sh create.sh` `-b` __`<my-s3-bucket-in-cali>`__ `-m` __`m3.xlarge`__ `-p` __`0.050`__ `-n` __`2`__ `-t` __`m3.xlarge`__ `-q` __`0.050`__ `-r` __`"a normal cluster with M3.xLarge servers"`__
+    
+    - Check the [Northern California AWS EMR management console](us-west-1.console.aws.amazon.com/elasticmapreduce) to verify that:
+        - the cluster enters the "__Bootstrapping__" stage after about 15 minutes
+            - if it does not, that means your price is too low; terminate the cluster and try again
+        - the cluster enters the "__Running__" stage after about 30-45 minutes
+        
+    - Once the cluster is in the "__Running__" stage, connect to the cluster by running command: __`sh connect -d <Your-Cluster-Master-Public-DNS>`__ and typing _"yes"_ to accept any questions in the command-line terminal
+        - the command should open a new tab on your internet browser, with address __`localhost:8133`__; if that does not happen, manually go to  __`localhost:8133`__ in a browswer windows
+        - check that you see __`Jupyter`__ environment in the browser window
+        
+    - Terminate your cluster through the AWS EMR management console.
+         
 
 ### `Git` & Related Version-Control Software
 
