@@ -59,6 +59,9 @@ target/
 # iPython Notebook files
 *ipynb_checkpoints*
 
+# Rplot files
+Rplot*.pdf
+
 # Spark files
 *metastore_db*
 pyspark_csv.py
